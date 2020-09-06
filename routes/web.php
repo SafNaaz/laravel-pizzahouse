@@ -17,22 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pizzas', function () {
-    // get data from db
-    $pizza = [
-        'type' => 'hawaiian',
-        'base' => 'cheesy crust',
-        'price' => 10
-    ];
+Route::get('/pizzas', 'PizzaController@index');
 
-    $name = request('name');
-    return view('pizzas', [
-        'pizza' => $pizza,
-        'name' => $name
-    ]);
-});
-
-Route::get('/pizzas/{id}', function ($id) {
-    // use the $id variable to query the db for a record
-    return view('details', ['id' => $id]);
-});
+Route::get('/pizzas/{id}', 'PizzaController@show');
