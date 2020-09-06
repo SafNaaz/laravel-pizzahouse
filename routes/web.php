@@ -18,5 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('/pizzas', function () {
-    return view('pizzas');
+    // return view('pizzas');
+    return 'pizzas';
 });
