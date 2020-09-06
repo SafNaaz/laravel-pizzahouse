@@ -61,9 +61,18 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            footer{
+                background: #eee;
+                padding: 20px;
+                text-align: center;
+            }
         </style>
     </head>
     <body>
         @yield('content')
+        <footer>
+            Copyright 2020 Pizza House
+        </footer>
     </body>
 </html>
