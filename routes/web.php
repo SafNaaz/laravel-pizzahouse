@@ -19,5 +19,6 @@ Route::get('/', function () {
 
 Route::get('/pizzas', function () {
     // return view('pizzas');
-    return 'pizzas';
+    // return 'pizzas';
+    return ['name' => 'veg pizzas', 'base' => 'classic'];
 });
