@@ -5,10 +5,14 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Pizzas
+            Pizza List
         </div>
 
-        <p>{{ $name }} </p>
+        @foreach($pizzas as $pizza)
+            <div>
+                {{ $pizza->name }} - {{ $pizza->type }} -{{ $pizza->base }}
+            </div>
+        @endforeach
         
     </div>
 </div>
