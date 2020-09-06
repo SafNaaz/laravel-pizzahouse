@@ -71,7 +71,9 @@
                     Pizzas
                 </div>
                 <p>{{ $type}} - {{ $base }} - {{$price}}</p>
-
+                @if($price > 15)
+                    <p>this pizza is expensive</p>
+                @endif
             </div>
         </div>
     </body>

@@ -22,7 +22,7 @@ Route::get('/pizzas', function () {
     $pizza = [
         'type' => 'hawaiian',
         'base' => 'cheesy crust',
-        'price' => 10
+        'price' => 16
     ];
     return view('pizzas', $pizza);
 });
