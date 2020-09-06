@@ -24,5 +24,10 @@ Route::get('/pizzas', function () {
         'base' => 'cheesy crust',
         'price' => 10
     ];
-    return view('pizzas', $pizza);
+
+    $name = request('name');
+    return view('pizzas', [
+        'pizza' => $pizza,
+        'name' => $name
+    ]);
 });
