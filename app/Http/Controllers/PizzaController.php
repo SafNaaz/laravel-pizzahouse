@@ -17,13 +17,13 @@ class PizzaController extends Controller
 
         $pizzas = Pizza::latest()->get();
         
-        return view('pizzas', [
+        return view('pizzas.index', [
             'pizzas' => $pizzas
         ]);
     }
 
     public function show($id){
         // use the $id variable to query the db for a record
-        return view('details', ['id' => $id]);
+        return view('pizzas.show', ['id' => $id]);
     }
 }
