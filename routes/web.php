@@ -19,4 +19,9 @@ Route::get('/', function () {
 
 Route::get('/pizzas', 'PizzaController@index');
 
+// this should be above wildchar
+Route::get('/pizzas/create', 'PizzaController@create');
+
 Route::get('/pizzas/{id}', 'PizzaController@show');
+
+
