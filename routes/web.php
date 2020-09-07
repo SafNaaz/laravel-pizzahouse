@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pizzas', 'PizzaController@index');
+Route::get('/pizzas', 'PizzaController@index')->middleware('auth');
 
 // this should be above wildchar
 Route::get('/pizzas/create', 'PizzaController@create');
