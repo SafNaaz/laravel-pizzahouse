@@ -33,6 +33,7 @@ class PizzaController extends Controller
     }
 
     public function store(){
+        error_log(request('name'));
         return redirect('/');
     }
 }
